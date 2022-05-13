@@ -194,6 +194,7 @@ public class Connect {
 			{
 				return "Error while connecting to the database for deleting.";
 			}
+			
 			// create a prepared statement
 			String query = "DELETE FROM `connection` WHERE connectionId=?";
 			

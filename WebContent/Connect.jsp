@@ -41,6 +41,7 @@
 				Price:
 				<input id="price" name="price" type="text" class="form-control form-control-sm"><br>
 				
+				
 				<!-- DATE -->
 				Date:
 				 	<input id="date" name="date" type="date" class="form-control form-control-sm"><br>

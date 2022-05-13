@@ -173,8 +173,7 @@ public class Connect {
 			String newConnection = readConnection();
 			output = "{\"status\":\"success\", \"data\": \"" + newConnection + "\"}";
 
-		} 
-		catch (Exception e) 
+		}catch (Exception e) 
 		{
 			output = "{\"status\":\"error\", \"data\": \"Error while updating the connection.\"}";
 			System.err.println(e.getMessage());

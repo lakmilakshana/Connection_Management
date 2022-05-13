@@ -115,7 +115,7 @@ function onItemDeleteComplete(response, status)
 			if (resultSet.status.trim() == "success")
 			{
 			
-				$("#alertSuccess").text("Deleted Successfully!!."); 
+				$("#alertSuccess").text("Successfully Deleted!!."); 
 				$("#alertSuccess").show(); 
 				$("#divItemsGrid").html(resultSet.data); 
 				

@@ -19,7 +19,7 @@ public class Connect {
 
 			// Provide the correct details: DBServer/DBName, username, password
 			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/buyer2", "root", "lakmi");
-
+			
 		} 
 		catch (Exception e) 
 		{
@@ -90,7 +90,7 @@ public class Connect {
 			}
 
 			// Prepare the html table to be displayed
-			output = "<table border='1' ><tr ><th >Connection Name</th><th >Connection Type</th>"
+			output = "<table border='1'><tr ><th >Connection Name</th><th >Connection Type</th>"
 					+ "<th>Description</th><th>Price</th><th>Date</th><th>Update</th>"
 					+ "<th>Remove</th></tr>";
 

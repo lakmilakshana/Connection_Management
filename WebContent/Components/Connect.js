@@ -18,7 +18,6 @@ $(document).on("click", "#btnSave", function(event){
 		 return; 
 	 } 
 
-
 	// If valid------------------------
 	var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT"; 
 		$.ajax( 

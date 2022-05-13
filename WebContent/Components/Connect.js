@@ -139,7 +139,7 @@ function onItemDeleteComplete(response, status)
 // CLIENT-MODEL================================================================
 function validateItemForm()
 {
-		// CODE
+		
 	//CONNECTION-TYPE---------------------------
 	if ($("#connectionType").val().trim() == "")
 	{

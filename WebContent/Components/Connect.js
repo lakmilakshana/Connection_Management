@@ -81,7 +81,6 @@ $(document).on("click", ".btnUpdate", function(event)
 		$("#description").val($(this).closest("tr").find('td:eq(2)').text()); 
 		$("#price").val($(this).closest("tr").find('td:eq(3)').text()); 
 		$("#date").val($(this).closest("tr").find('td:eq(4)').text()); 
-		// $("#").val($(this).closest("tr").find('td:eq(8)').text()); 
 		 
 });
 

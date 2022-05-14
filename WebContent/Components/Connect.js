@@ -5,8 +5,7 @@ $(document).on("click", "#btnSave", function(event){
 	 $("#alertSuccess").hide(); 
 	 $("#alertError").text(""); 
 	 $("#alertError").hide(); 
- 
-	 
+
 	// Form validation-------------------
 	var status = validateItemForm(); 
 	
@@ -71,7 +70,6 @@ function onItemSaveComplete(response, status)
 	$("#formItem")[0].reset(); 
 }
 
-
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 { 
@@ -83,7 +81,6 @@ $(document).on("click", ".btnUpdate", function(event)
 		$("#date").val($(this).closest("tr").find('td:eq(4)').text()); 
 		 
 });
-
 
 // REMOVE=============================================
 $(document).on("click", ".btnRemove", function(event) { 
@@ -100,7 +97,6 @@ $(document).on("click", ".btnRemove", function(event) {
 	}); 
 })
 	
-
 
 function onItemDeleteComplete(response, status)
 {

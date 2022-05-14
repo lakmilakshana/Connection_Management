@@ -92,7 +92,6 @@ public class ConnectAPI extends HttpServlet
 	// Convert request parameters to a Map
 		private static Map getParasMap(HttpServletRequest request) 
 		{
-			
 			Map<String, String> map = new HashMap<String, String>(); 
 			try{ 
 				

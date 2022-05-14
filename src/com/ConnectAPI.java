@@ -71,7 +71,7 @@ public class ConnectAPI extends HttpServlet
 												paras.get("description").toString(),  
 												paras.get("price").toString(), 
 												paras.get("date").toString()
-												//paras.get("sector").toString(),
+												
 												); 
 		response.getWriter().write(output); 
 	}

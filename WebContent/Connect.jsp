@@ -22,7 +22,6 @@
 
 			<form id="formItem" name="formItem">
 		
-		
 				<!-- CONNECTION NAME -->
 				Connection Name:
 					<input id="connectionName" name="connectionName" type="text" class="form-control form-control-sm"><br>
@@ -50,19 +49,19 @@
 				<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 			
 			</form>
-	
+			
 <div id="alertSuccess" class="alert alert-success"></div>
 	<div id="alertError" class="alert alert-danger"></div>
 	<br>
 		<div id="divItemGrid">
 			<%
-			Connect ConnectionObj = new Connect(); 
+			 Connect ConnectionObj = new Connect(); 
 			 out.print(ConnectionObj.readConnection()); 
 			%>
 		</div>
 		</div> 
 	</div> 
 </div> 
-	
+
 </body>
 </html>

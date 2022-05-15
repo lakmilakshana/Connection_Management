@@ -90,9 +90,16 @@ public class Connect {
 			}
 
 			// Prepare the html table to be displayed
-			output = "<table border='1'><tr ><th >Connection Name</th><th >Connection Type</th>"
-					+ "<th>Description</th><th>Price</th><th>Date</th><th>Update</th>"
-					+ "<th>Remove</th></tr>";
+			output = "<table border='1' class='table table-info table-bordered table-striped table-hover table-warning'>"
+					+ "<tr >"
+						+ "<th >Connection Name</th>"
+						+ "<th >Connection Type</th>"
+						+ "<th>Description</th>"
+						+ "<th>Price</th>"
+						+ "<th>Date</th>"
+						+ "<th>Update</th>"
+						+ "<th>Remove</th>"
+					+ "</tr>";
 
 			String query = "select * from `connection`";
 			Statement stmt = con.createStatement();

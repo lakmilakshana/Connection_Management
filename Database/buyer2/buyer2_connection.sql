@@ -30,7 +30,7 @@ CREATE TABLE `connection` (
   `price` double DEFAULT NULL,
   `date` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`connectionID`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,7 @@ CREATE TABLE `connection` (
 
 LOCK TABLES `connection` WRITE;
 /*!40000 ALTER TABLE `connection` DISABLE KEYS */;
+INSERT INTO `connection` VALUES (51,'60A+Three+Phase','Ordinary+Supply+Connection','415AC',36000,'2022-05-16'),(52,'100A Three Phase','Bulk Supply Connection','70kVA',270000,'2022-04-11'),(53,'30A-Three P','Ordinary Supply Connection','415AC and 21kVA',32000,'2022-05-16'),(54,'90A Single Phase','Ordinary Supply Connection','3.5kVA',160000,'2022-05-02');
 /*!40000 ALTER TABLE `connection` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-15 23:38:19
+-- Dump completed on 2022-05-15 23:51:57

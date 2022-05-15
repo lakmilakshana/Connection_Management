@@ -4,7 +4,8 @@ $(document).on("click", "#btnSave", function(event){
 	 $("#alertSuccess").text(""); 
 	 $("#alertSuccess").hide(); 
 	 $("#alertError").text(""); 
-	 $("#alertError").hide(); 
+	 $("#alertError").hide();
+	  
 
 	// Form validation-------------------
 	var status = validateItemForm(); 
@@ -94,7 +95,9 @@ $(document).on("click", ".btnRemove", function(event) {
 	 	{ 
 	 		onItemDeleteComplete(response.responseText, status); 
 	 	} 
+	 	
 	}); 
+	
 })
 	
 
@@ -170,4 +173,6 @@ function validateItemForm()
 	
 		return true;
 }
+
+
 

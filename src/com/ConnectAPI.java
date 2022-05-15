@@ -15,101 +15,90 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class FundAPI
  */
 @WebServlet("/ConnectAPI")
-public class ConnectAPI extends HttpServlet 
-{
+public class ConnectAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	Connect ConnectionObj = new Connect();
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ConnectAPI() 
-    {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
+	public ConnectAPI() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
+		// doGet(request, response);
 		String output = ConnectionObj.insertConnection(request.getParameter("hidItemIDSave"),
-				request.getParameter("connectionName"),
-				request.getParameter("connectionType"),
-				request.getParameter("description"),
-				request.getParameter("price"),
-				request.getParameter("date")
-				);
-		
-			response.getWriter().write(output);
+				request.getParameter("connectionName"), request.getParameter("connectionType"),
+				request.getParameter("description"), request.getParameter("price"), request.getParameter("date"));
+
+		response.getWriter().write(output);
 	}
-	
+
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
-	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
+	protected void doPut(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		Map paras = getParasMap(request); 
-		String output = ConnectionObj.updateConnection(paras.get("hidItemIDSave").toString(), 
-												paras.get("connectionName").toString(), 
-												paras.get("connectionType").toString(),
-												paras.get("description").toString(),  
-												paras.get("price").toString(), 
-												paras.get("date").toString()
-												
-												); 
-		response.getWriter().write(output); 
+
+		Map paras = getParasMap(request);
+		String output = ConnectionObj.updateConnection(paras.get("hidItemIDSave").toString(),
+				paras.get("connectionName").toString(), paras.get("connectionType").toString(),
+				paras.get("description").toString(), paras.get("price").toString(), paras.get("date").toString()
+
+		);
+		response.getWriter().write(output);
 	}
 
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
-	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Map paras = getParasMap(request); 
-		
-		String output = ConnectionObj.deleteConnection(paras.get("connectionId").toString()); 
-		
+		Map paras = getParasMap(request);
+
+		String output = ConnectionObj.deleteConnection(paras.get("connectionId").toString());
+
 		response.getWriter().write(output);
 	}
-	
+
 	// Convert request parameters to a Map
-		private static Map getParasMap(HttpServletRequest request) 
-		{
-			Map<String, String> map = new HashMap<String, String>(); 
-			try{ 
-				
-				 Scanner scanner = new Scanner(request.getInputStream(), "UTF-8"); 
-				 String queryString = scanner.hasNext() ? 
-				 scanner.useDelimiter("\\A").next() : ""; 
-				 scanner.close(); 
-				 String[] params = queryString.split("&"); 
-				 for (String param : params) 
-				 { 
-					 String[] p = param.split("=");
-					 map.put(p[0], p[1]); 
-				 } 
-				 
-			}catch (Exception e) 
-			{ 
-				
-			} 
-			return map; 
+	private static Map getParasMap(HttpServletRequest request) {
+		Map<String, String> map = new HashMap<String, String>();
+		try {
+
+			Scanner scanner = new Scanner(request.getInputStream(), "UTF-8");
+			String queryString = scanner.hasNext() ? scanner.useDelimiter("\\A").next() : "";
+			scanner.close();
+			String[] params = queryString.split("&");
+			for (String param : params) {
+				String[] p = param.split("=");
+				map.put(p[0], p[1]);
+			}
+
+		} catch (Exception e) {
+
 		}
+		return map;
+	}
 }

@@ -38,7 +38,7 @@
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
 						<div class="img"
-							style="background-image: url(images/connection1.jpg);"></div>
+							style="background-image: url(images/electrician.jpg);"></div>
 						<div class="login-wrap p-4 p-md-5">
 							<div class="d-flex">
 								<div class="w-100">
